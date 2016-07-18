@@ -1,0 +1,33 @@
+dominion:
+  :login:
+    :url: 'https://www.dom.com/residential/dominion-virginia-power'
+    :username_identifier:
+      :name: 'user'
+    :password_identifier:
+      :name: 'password'
+    :submit_identifier:
+      :type: 'submit'
+    :success_verifier:
+      :xpath: '//*[@id="_MainView1"]/h1'
+      :expected_value: 'My Account Overview'
+  :data_points:
+    :bill_due_date:
+      :url: 'https://mya.dom.com/home/index/?d=t'
+      :type: 'date'
+      :xpath: '//*[@id="homepageContent"]/div[3]/div[1]/p/span[1]'
+    :bill_amount:
+      :url: 'https://mya.dom.com/home/index/'
+      :type: 'currency'
+      :xpath: '//*[@id="homepageContent"]/div[3]/div[2]/p/span'
+    :meter_read_date:
+      :url: 'https://mya.dom.com/usage/analyzeyourenergyusage'
+      :type: 'date'
+      :xpath: '//*[@id="paymentsTable"]/tbody/tr[2]/td[1]'
+    :meter_usage:
+      :url: 'https://mya.dom.com/usage/analyzeyourenergyusage'
+      :type: 'number'
+      :xpath: '//*[@id="paymentsTable"]/tbody/tr[2]/td[3]'
+    :service_start_date:
+      :url: 'https://mya.dom.com/home/index/'
+      :type: 'date'
+      :xpath: '//*[@id="homepageContent"]/div[7]/div[1]/p'
