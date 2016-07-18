@@ -1,5 +1,6 @@
 source "https://rubygems.org"
 
-gem 'mechanize'
+gem 'headless'
+gem 'watir-webdriver'
 gem 'dotenv'
 gem 'minitest'
